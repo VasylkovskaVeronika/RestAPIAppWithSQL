@@ -6,7 +6,7 @@ namespace WebApplication2.Repositories;
 
 public interface IAnimalsRepository
 {
-    List<Animal> GetAnimals();
+    List<Animal> GetAnimals(String column);
     bool UpdateAnimal(Animal animal);
     bool AddAnimal(AddAnimal animal);
     bool DeleteAnimal(int id);
@@ -21,7 +21,7 @@ public class AnimalsRepository : IAnimalsRepository
             _configuration = configuration;
         }
 
-        public List<Animal> GetAnimals()
+        public List<Animal> GetAnimals(String column)
         {
             //string connStr = "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=apbd;Integrated Security=True;Connect" +
             // " Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi" +
@@ -29,7 +29,9 @@ public class AnimalsRepository : IAnimalsRepository
             using SqlConnection conn = new SqlConnection(_configuration.GetConnectionString("Default")); 
             conn.Open();
 
-            using SqlCommand command = new SqlCommand("SELECT * FROM ANIMAL", conn);
+            using SqlCommand command = new SqlCommand("SELECT * FROM ANIMAL "+
+                "ORDER BY @column", conn);
+            command.Parameters.AddWithValue("@column", column);
 
             var reader = command.ExecuteReader();
 

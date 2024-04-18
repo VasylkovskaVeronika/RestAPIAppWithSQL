@@ -18,9 +18,11 @@ public class AnimalsController: ControllerBase
         _repository = repo;
     }
     [HttpGet]
-    public IActionResult GetAnimals(OrderAnimals order)
+    public IActionResult GetAnimals([FromQuery] string orderBy)
     {
-        var res = _repository.GetAnimals();
+        var availableValues = new HashSet<string> {"name", "description", "category", "area"};
+        orderBy = availableValues.Contains(orderBy.ToLower()) ? orderBy : "name";
+        var res = _repository.GetAnimals(orderBy);
         return Ok(res);
     }
 
