@@ -1,3 +1,5 @@
+using WebApplication2.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+//dependency
+builder.Services.AddScoped<IAnimalsRepository, AnimalsRepository>();
 
 var app = builder.Build();
 
