@@ -2334,20 +2334,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\s28289\\.nuget\\packages\\": {}
+    "C:\\Users\\HUAWEI\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\s28289\\RiderProjects\\RestAPIAppWithSQL\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+      "projectUniqueName": "C:\\Users\\HUAWEI\\3D Objects\\c#\\apbd6\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
       "projectName": "WebApplication2",
-      "projectPath": "C:\\Users\\s28289\\RiderProjects\\RestAPIAppWithSQL\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
-      "packagesPath": "C:\\Users\\s28289\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\s28289\\RiderProjects\\RestAPIAppWithSQL\\WebApplication2\\WebApplication2\\obj\\",
+      "projectPath": "C:\\Users\\HUAWEI\\3D Objects\\c#\\apbd6\\WebApplication2\\WebApplication2\\WebApplication2.csproj",
+      "packagesPath": "C:\\Users\\HUAWEI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HUAWEI\\3D Objects\\c#\\apbd6\\WebApplication2\\WebApplication2\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+      ],
       "configFilePaths": [
-        "C:\\Users\\s28289\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\HUAWEI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2366,11 +2374,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2409,7 +2412,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
