@@ -9,6 +9,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 //dependency
 builder.Services.AddScoped<IAnimalsRepository, AnimalsRepository>();
+builder.Services.AddScoped<IWarehouseRepository, WarehouseRepository>();
+//builder.Services.AddScoped<IWarehouses2Repository, Warehouses2Repository>();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
