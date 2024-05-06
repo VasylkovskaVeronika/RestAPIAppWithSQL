@@ -128,6 +128,7 @@ public class WarehouseRepository: IWarehouseRepository
         }
     }
 
+    //Task 2
     public int InsertProductWarehouseWithStoredProcedure(AddProductWarehouse newPW)
     {
         using (SqlConnection con = new SqlConnection(_configuration.GetConnectionString("ProductionDb")))
